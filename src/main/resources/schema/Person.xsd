@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/Person" xmlns:tns="http://www.example.org/Person" elementFormDefault="qualified">
+
+    <element name="Person" type="tns:PersonType"></element>
+
+    <complexType name="PersonType">
+    	<sequence>
+    		<element name="Id" type="string"></element>
+    		<element name="FirstName" type="string"></element>
+    		<element name="Surname" type="string"></element>
+    		<element name="Age" type="int"></element>
+    		<element name="Email" type="string"></element>
+    		<element name="Address" type="tns:AddressType"></element>
+    		<element name="Orders" type="tns:OrderType"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="AddressType">
+    	<sequence>
+    		<element name="HouseNum" type="string"></element>
+    		<element name="Street" type="string"></element>
+    		<element name="City" type="string"></element>
+    		<element name="District" type="string"></element>
+    		<element name="State" type="string"></element>
+    		<element name="PostalCd" type="int"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="OrderType">
+    	<sequence>
+    		<element name="Id" type="string"></element>
+    		<element name="Name" type="string"></element>
+    		<element name="Price" type="double"></element>
+    		<element name="Category" type="string"></element>
+    	</sequence>
+    </complexType>
+
+    <element name="Order" type="tns:OrderType"></element>
+</schema>
